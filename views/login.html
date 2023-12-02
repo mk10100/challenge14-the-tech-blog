@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="login.css" />
+    <title>Login and Sign Up</title>
+  </head>
+  <body>
+    <div class="title-container">
+      <h1>The Tech Blog</h1>
+    </div>
+
+    <div class="login-container">
+      <div id="loginForm" class="login-form">
+        <h2>Login</h2>
+        <form id="loginForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" required />
+
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" required />
+
+          <button type="button" onclick="login()">Login</button>
+          <p id="signupLink">
+            Don't have an account?
+            <a href="#" onclick="showSignUpForm()">Sign Up</a>
+          </p>
+        </form>
+      </div>
+
+      <div id="signupForm" class="login-form" style="display: none">
+        <h2>Sign Up</h2>
+        <form>
+          <label for="newUsername">Create a username:</label>
+          <input type="text" id="newUsername" name="newUsername" required />
+
+          <label for="newPassword">Create a password:</label>
+          <input type="password" id="newPassword" name="newPassword" required />
+
+          <button type="button" onclick="signUp()">Sign Up</button>
+          <p id="loginLink">
+            Already have an account?
+            <a href="#" onclick="showLoginForm()">Login</a>
+          </p>
+        </form>
+      </div>
+    </div>
+
+    <script src="login.js"></script>
+  </body>
+</html>
